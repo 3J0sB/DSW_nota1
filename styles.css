@@ -127,6 +127,24 @@ h1, h2 {
   background-color: var(--terminal-black);
 }
 
+
+.title-card button{
+  display: block;
+  background-color: #001800;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  font-family: 'VT323', monospace;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.title-card button:hover{
+  background-color: var(--terminal-dark);
+  color: var(--alien-green-glow);
+  box-shadow: 0 0 5px var(--alien-green-glow);
+}
 .img-card img {
   width: 100%;
   height: 100%;
@@ -265,12 +283,12 @@ h1, h2 {
   }
   .info-card-12, .info-card-34 {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    width: 75%;
+    justify-content: space-between;
     align-items: stretch;
     height: auto;
     border: 1px solid var(--alien-green);
-  }s
+  }
  
   .info-card-12 {
     flex-direction: row-reverse;
@@ -280,11 +298,18 @@ h1, h2 {
   .title-card, .img-card, .info-card, .review-card {
     height: auto; 
     min-height: 300px; 
-    width: 25%;
+    width: 50%;
+    max-width: 50%;
     box-sizing: border-box;
     flex: 1; 
     background-color: var(--terminal-dark);
   }
+
+  .title-card, .info-card {
+    padding: 50px;
+    margin: 0;
+  }
+
   .title-card button{
     display: block;
     background-color: #001800;

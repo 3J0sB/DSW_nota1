@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --alien-green: #33ff33;
+  --alien-green-glow: rgba(51, 255, 51, 0.7);
+  --terminal-background: #001800;
+  --terminal-border: #33ff33;
+  --terminal-black: #000000;
+  --terminal-dark: #002200;
+}
+
+body {
+  background-color: var(--terminal-black);
+  color: var(--alien-green);
+  font-family: 'VT323', monospace;
+  padding: 0;
+  margin: 10px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--terminal-background);
+  border: 1px solid var(--alien-green);
+  box-shadow: 0 0 10px var(--alien-green-glow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  text-transform: uppercase;
+  background-color: var(--terminal-dark);
+  border: 1px solid var(--alien-green);
+  box-shadow: inset 0 0 5px var(--alien-green-glow);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.header-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  margin-left: 10px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.button-ventas{
+  background-color: #001800;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  font-family: 'VT323', monospace;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.button-ventas:hover {
+  background-color: var(--terminal-dark);
+  color: var(--alien-green-glow);
+  box-shadow: 0 0 5px var(--alien-green-glow);
+} 
+
+.button-comience{
+  display: none;
+}
+
+h1, h2 {
+  color: var(--alien-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-shadow: 0 0 5px var(--alien-green-glow);
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+  text-align: justify;
+  border: 1px solid var(--alien-green);
+  background-color: var(--terminal-dark);
+}
+
+.title-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--terminal-dark);
+  border-bottom: 1px solid var(--alien-green);
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+
+.title-card-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  margin-right: 10px;
+  border: 1px solid var(--alien-green);
+  background-color: var(--terminal-black);
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+  text-align: justify;
+  border: 1px solid var(--alien-green);
+  background-color: var(--terminal-dark);
+}
+
+.review-card img {
+  width: 100%;
+  height: 100%;
+  
+  
+}
+
+.people-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.people-cards-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: var(--terminal-black);
+}
+
+.people-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  text-align: center;
+  border: 1px solid var(--alien-green);
+  margin: 20px 0;
+  width: 75%;
+  background-color: var(--terminal-dark);
+}
+
+.people-card p {
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--alien-green);
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+
+.footer-container a {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.footer-container p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+
+.info-card p::after,
+.title-card p::after,
+.people-card p::after {
+  content: "_";
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+@media screen and (min-width: 768px) {
+  .info-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .button-comience{
+    display: block;
+    background-color: #001800;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    font-family: 'VT323', monospace;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .button-comience:hover {
+    background-color: var(--terminal-dark);
+    color: var(--alien-green-glow);
+    box-shadow: 0 0 5px var(--alien-green-glow);
+  } 
+ 
+  .title-card button:hover{
+    background-color: var(--terminal-dark);
+    color: var(--alien-green-glow);
+    box-shadow: 0 0 5px var(--alien-green-glow);
+  }
+  .info-card-12, .info-card-34 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+  }
+ 
+  .info-card-12 {
+    flex-direction: row-reverse;
+  }
+ 
+ 
+  .title-card,  .info-card{
+    height: 100%;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title-card button{
+    display: block;
+    background-color: #001800;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    font-family: 'VT323', monospace;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .img-card, .review-card {
+    height: 100%; 
+    width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
+  .people-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .people-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 50px;
+  }
+
+  .people-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+  }
+
+}
